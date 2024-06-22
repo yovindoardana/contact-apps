@@ -1,8 +1,12 @@
 # Contacts App
 
-### Link Demo
+### Video Demo
 
 [Contact Apps](https://contact-apps-inky.vercel.app/)
+
+### Demo (Vercel)
+
+[Contact Apps](https://drive.google.com/file/d/1hvSV6EE9QVmA3cXp8WMt1TMTR5HJIz8f/view?usp=sharing)
 
 ### Deskripsi
 
