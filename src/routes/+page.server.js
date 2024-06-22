@@ -1,4 +1,4 @@
-import { Contact } from '../lib/models/contact';
+import { Contact } from '../lib/models/ContactModel';
 
 export const load = async () => {
 	let contacts = await Contact.find().exec();
