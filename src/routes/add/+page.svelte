@@ -18,6 +18,7 @@
 			isLoading = true;
 			return async ({ result }) => {
 				if (result.type === 'success') {
+					isLoading = false;
 					goto('/');
 				}
 			};
@@ -81,7 +82,15 @@
 
 				<div class="mt-6 flex items-center justify-end gap-x-6">
 					<a href="/" class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
-					<button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+					<button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" disabled={isLoading}>
+						{#if isLoading}
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+								<path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12" /></path>
+							</svg>
+						{:else}
+							Save
+						{/if}
+					</button>
 				</div>
 			</div>
 		</div>
