@@ -2,7 +2,7 @@
 
 ### Link Demo
 
-[Link Demo](https://contact-apps-inky.vercel.app/)
+[Contact Apps](https://contact-apps-inky.vercel.app/)
 
 ### Deskripsi
 
@@ -10,15 +10,24 @@ Contact App adalah aplikasi manajemen kontak sederhana, dirancang untuk membantu
 
 ### Cara Menjalankan
 
-1. [Instalasi](#instalasi)
+1. Clone repository
+
+```bash
+git clone https://github.com/yovindoardana/contact-apps.git
+cd contact-apps
+```
+
+2. [Install package](#instalasi)
+
+- node.js version : 21.7.3
 
 ```bash
 npm install
 ```
 
-2. [Sesuaikan file .env](#set)
+3. [Sesuaikan file .env](#set)
 
-3. [Jalankan Aplikasi](#run)
+4. [Jalankan Aplikasi](#run)
 
 ```bash
 npm run dev
