@@ -1,9 +1,21 @@
 import { Contact } from '../../lib/models/ContactModel';
 
+export const load = async () => {
+	const options = [];
+	const res = await fetch('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json');
+	const data = await res.json();
+	data.forEach((item) => {
+		options.push(item.name);
+	});
+
+	return {
+		options
+	};
+};
+
 export const actions = {
 	create: async ({ request }) => {
 		const data = await request.formData();
-		console.log('data', data);
 
 		const newContact = {
 			firstname: data.get('firstname'),

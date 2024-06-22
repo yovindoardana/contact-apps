@@ -1,6 +1,13 @@
 import { Contact } from '../../../lib/models/ContactModel';
 
 export const load = async ({ params }) => {
+	const options = [];
+	const res = await fetch('https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json');
+	const data = await res.json();
+	data.forEach((item) => {
+		options.push(item.name);
+	});
+
 	let contact = await Contact.findById(params.contactId);
 
 	if (!contact)
@@ -10,9 +17,10 @@ export const load = async ({ params }) => {
 		};
 
 	contact = JSON.parse(JSON.stringify(contact));
-	console.log('contact', contact);
+
 	return {
-		contact
+		contact,
+		options
 	};
 };
 

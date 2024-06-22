@@ -21,18 +21,21 @@
 <div class="mx-auto w-full max-w-7xl py-6 sm:px-6 lg:px-8">
 	<div class="py-10">
 		<div class="px-4 sm:px-6 lg:px-8">
-			<div class="sm:flex sm:align-middle">
+			<div class="flex sm:align-middle">
 				<div class="flex-auto">
 					<h1 class="text-base font-semibold leading-6 text-gray-900">Contacts</h1>
 					<p class="mt-1 text-sm text-gray-500">A list of all the contacts</p>
 				</div>
-				<div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-					<a href="/add" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 bio bou bov box bpe">Add User</a>
+				<div class="my-auto">
+					<a href="/add" class="my-auto inline-flex rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 bio bou bov box bpe">
+						<svg class="md:mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(255,255,255,1)"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
+						<span class="hidden md:inline my-auto text-inherit">Add User</span>
+					</a>
 				</div>
 			</div>
 			<div class="mt-8 flow-root">
 				<div class="flex flex-col">
-					<div class="sm:flex sm:items-center ms-auto">
+					<div class="sm:flex sm:items-center md:ms-auto">
 						<div class="w-full max-w-lg lg:max-w-xs">
 							<label for="search" class="sr-only">Search</label>
 							<div class="relative text-gray-400 focus-within:text-gray-600">
